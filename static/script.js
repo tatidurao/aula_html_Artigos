@@ -39,100 +39,24 @@ function openArticle() {
 
 
 function likeArticle() {
-  fetch(`${apiBase}/liked-article`).then(() => loadArticle());
+//
 }
 
 function dislikeArticle() {
-  fetch(`${apiBase}/unliked-article`).then(() => loadArticle());
+ //
 }
 
-function reloadArticle() {
-  loadArticle();
-}
 
 loadArticle();
 
 
 // ===================== POPULAR =====================
 function loadPopular() {
-  fetch(`${apiBase}/popular-articles`)
-    .then((r) => r.json())
-    .then((data) => {
-      const list = document.getElementById("list");
-      const status = document.getElementById("status");
-
-      const items = data.data || [];
-      list.innerHTML = "";
-
-      items.forEach((item) => {
-        const div = document.createElement("div");
-        div.className = "card";
-
-        const img = document.createElement("img");
-        img.src = item.poster_link || "/static/leitura.avif";
-
-        const h3 = document.createElement("h3");
-        h3.innerText = item.title || "Sem título";
-
-        const badge = document.createElement("div");
-        badge.className = "badge";
-        badge.innerText = `Idioma: ${item.lang || "?"} | Interação: ${item.total_events?? "?"}`;
-
-        div.appendChild(img);
-        div.appendChild(h3);
-        div.appendChild(badge);
-
-        list.appendChild(div);
-      });
-
-      status.innerText = `Total: ${items.length}`;
-    })
-    .catch((err) => {
-      console.error(err);
-      const status = document.getElementById("status");
-      if (status) status.innerText = "Erro ao carregar Popular.";
-    });
+  //
 }
 
 // ===================== RECOMMENDED =====================
 function loadRecommended() {
-  fetch(`${apiBase}/recommended-articles`)
-    .then((r) => r.json())
-    .then((data) => {
-      const list = document.getElementById("list");
-      const status = document.getElementById("status");
-
-      const items = data.data || [];
-      list.innerHTML = "";
-
-      items.forEach((item) => {
-        const div = document.createElement("div");
-        div.className = "card";
-        
-        const img = document.createElement("img");
-        img.src = "/static/leitura2.jpg";
-
-        const h3 = document.createElement("h3");
-        h3.innerText = item.title || "Sem título";
-
-        const badge = document.createElement("div");
-        badge.className = "badge";
-         badge.className = "badge";
-        badge.innerText = `Idioma: ${item.lang || "?"} | Interação: ${item.total_events?? "?"}`;
-        //badge.innerText = `Nota: ${item.rating ?? "?"}`;
-
-          div.appendChild(img);
-        div.appendChild(h3);
-        div.appendChild(badge);
-
-        list.appendChild(div);
-      });
-
-      status.innerText = `Total: ${items.length}`;
-    })
-    .catch((err) => {
-      console.error(err);
-      const status = document.getElementById("status");
-      if (status) status.innerText = "Erro ao carregar Recomendado.";
-    });
+  //
 }
+
