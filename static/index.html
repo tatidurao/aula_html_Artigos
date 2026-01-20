@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Artigos a Ler</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+  <div class="header">
+    <h1>📚 Artigos a Ler</h1>
+
+    <div class="nav">
+      <a href="/">Início</a>
+      <a href="/popular">Popular</a>
+      <a href="/recomendado">Recomendado</a>
+    </div>
+  </div>
+
+  <div class="container">
+    <p id="status" class="status">Carregando artigo...</p>
+
+    <div class="frame-box">
+      <iframe id="articleFrame" src=""></iframe>
+    </div>
+
+    <div class="buttons">
+      <button onclick="likeArticle()">👍 Gostei</button>
+      <button onclick="dislikeArticle()">👎 Não gostei</button>
+     
+
+      <button id="btnOpen" style="display:none;" onclick="openArticle()">
+        🔗 Abrir em nova aba
+      </button>
+    </div>
+
+  </div>
+
+  <script src="/static/script.js"></script>
+</body>
+
+</html>
