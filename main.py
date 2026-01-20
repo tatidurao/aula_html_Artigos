@@ -132,13 +132,7 @@ def history():
 def serve_index():
     return send_from_directory('static', 'index.html')
 
-@app.route('/popular')
-def serve_popular():
-    return send_from_directory('static', 'popular.html')
-
-@app.route('/recomendado')
-def serve_recomendado():
-    return send_from_directory('static', 'recomendado.html')
+#rota popular e recommendados
 
 
 if __name__ == "__main__":
